@@ -9,6 +9,7 @@
   import axios from 'axios';
  
   export default {
+    name: 'QuizQuestion',
     data() {
       return {
         questions: []
