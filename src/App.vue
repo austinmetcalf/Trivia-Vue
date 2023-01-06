@@ -1,66 +1,61 @@
 <template>
   <div>
-    <div class="team">
-      <input placeholder="Team Name">0
-      <button>-</button>
-      <button>+</button>
-    </div>
-    <div class="header-container">
-      <h1>Welcome to trivia!</h1>
-    </div>
-    <div class="question-container">
-      <button @click="getDataFromAPI">Next question</button>
-      <p>{{ currentQuestion }}</p>
-      <p>{{ currentQuestion.correct_answer }}</p>
-      <p>{{ currentQuestion.incorrect_answers }}</p>
-    </div>
-    <QuizQuestion/>
+    <div class="team-name-header">
+    <teamName>
 
+    </teamName>
     
+    <teamName>
+
+    </teamName>
+    <teamName>
+
+    </teamName>
+    <teamName>
+
+    </teamName>
+    </div>
     
+    <hr>
+    <div class="quiz-container">
+    <QuizQuestionAPI></QuizQuestionAPI>
+    </div>
     
+    <!-- <QuizQuestion/> -->
+    <hr>
+    <questionTimer></questionTimer>
   </div>
 </template>
 
 <script>
 
-import axios from 'axios'
-import QuizQuestion from './components/quizQuestion';
+
+import teamName from './components/teamName.vue'
+import questionTimer from './components/questionTimer.vue';
+import QuizQuestionAPI from './components/quizQuestionAPI.vue';
+// import quizQuestion from './components/quizQuestion.vue';
 
 export default {
   name: 'App',
   components: {
-    QuizQuestion,
+    teamName,
+    questionTimer,
+    QuizQuestionAPI
+    // QuizQuestion,
   },
-  methods: {
-    async getDataFromAPI() {
-      try {
-        const response = await axios.get('https://opentdb.com/api.php?amount=40&type=multiple');
-        this.dataFromAPI = response.data.results;
-        this.currentQuestion = this.dataFromAPI.shift()
-        console.log(this.dataFromAPI)
-      } catch (error) {
-        console.error(error);
-      }
-    },
-  },
-  data () {
-    return {
-      currentQuestion:'',
-    };
-  }, 
 }
 
 </script>
 
-<style>
-.header-container{
+<style scoped>
+.team-name-header{
   display: flex;
-  justify-content: center;
+  margin-bottom: 15px;
 }
-.question-container{
+.quiz-container{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 </style>

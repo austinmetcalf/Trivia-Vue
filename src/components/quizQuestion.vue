@@ -1,29 +1,18 @@
 <template>
-    <div>
+  <div>
       
      
-    </div>
-  </template>
+  </div>
+</template>
   
-  <script>
-  import axios from 'axios';
- 
-  export default {
-    name: 'QuizQuestion',
-    data() {
-      return {
-        questions: []
-      }
-    },
-    created() {
-      axios.get('https://opentdb.com/api.php?amount=40&type=multiple')
-        .then(response => {
-          this.questions = response.data.results;
-        })
-        .catch(error => {
-          console.error(error);
-        });
+<script>
+  export default{
+    name: "quizQuestion",
+    props: {
+      
     }
   }
-  </script>
-  
+</script>
+
+<style>
+</style>
