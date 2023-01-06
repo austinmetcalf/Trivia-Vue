@@ -53,7 +53,8 @@
     margin: 3px;
 }
 .team-score{
-    
+    display: flex;
     margin: 2px;
+    align-items: center;
 }
 </style>

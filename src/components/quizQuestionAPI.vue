@@ -63,5 +63,15 @@ export default{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 100px;
+}
+.button {
+  color: white;
+  background: #00a7e1;
+  border-radius: 5px;
+  border: 1px solid #2e6da4;
+  padding: 5px;
+  max-width: 200px;
+  margin: 1px;
 }
 </style>

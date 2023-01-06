@@ -24,6 +24,7 @@
     <!-- <QuizQuestion/> -->
     <hr>
     <questionTimer></questionTimer>
+    <div class="copy-right">&copy; Austin Metcalf</div>
   </div>
 </template>
 
@@ -57,5 +58,9 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-
+.copy-right{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
 </style>
