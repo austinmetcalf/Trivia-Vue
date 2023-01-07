@@ -1,64 +1,53 @@
 <template>
   <div>
     <div class="team-name-header">
-    <teamName>
+      <teamName> </teamName>
 
-    </teamName>
-    
-    <teamName>
-
-    </teamName>
-    <teamName>
-
-    </teamName>
-    <teamName>
-
-    </teamName>
+      <teamName> </teamName>
+      <teamName> </teamName>
+      <teamName> </teamName>
     </div>
-    
-    <hr>
+
+    <hr />
     <div class="quiz-container">
-    <QuizQuestionAPI></QuizQuestionAPI>
+      <QuizQuestionAPI></QuizQuestionAPI>
     </div>
-    
+
     <!-- <QuizQuestion/> -->
-    <hr>
+    <hr />
     <questionTimer></questionTimer>
     <div class="copy-right">&copy; Austin Metcalf</div>
   </div>
 </template>
 
 <script>
-
-
-import teamName from './components/teamName.vue'
-import questionTimer from './components/questionTimer.vue';
-import QuizQuestionAPI from './components/quizQuestionAPI.vue';
-// import quizQuestion from './components/quizQuestion.vue';
+import teamName from "./components/teamName.vue";
+import questionTimer from "./components/questionTimer.vue";
+import QuizQuestionAPI from "./components/quizQuestionAPI.vue";
+// import quizQuestionVue from './components/quizQuestion.vue';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     teamName,
     questionTimer,
-    QuizQuestionAPI
-    // QuizQuestion,
+    QuizQuestionAPI,
+    // quizQuestionVue
   },
-}
-
+};
 </script>
 
 <style scoped>
-.team-name-header{
+.team-name-header {
   display: flex;
   margin-bottom: 15px;
 }
-.quiz-container{
+.quiz-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.copy-right{
+.copy-right {
   position: fixed;
   bottom: 0;
   right: 0;
