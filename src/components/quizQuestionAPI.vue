@@ -30,6 +30,9 @@ export default {
       questionNumber: 0
     };
   },
+  mounted() {
+    this.getDataFromAPI();
+  },
   methods: {
     incrementQuestionNumber(){
       this.questionNumber ++
@@ -39,7 +42,7 @@ export default {
       console.log("Getting more questions");
       try {
         const response = await axios.get(
-          "https://opentdb.com/api.php?amount=40&category=22&difficulty=easy&type=multiple"
+          "https://opentdb.com/api.php?amount=40&category=9&difficulty=easy&type=multiple"
         );
         this.dataFromAPI = response.data.results;
         this.currentQuestion = this.dataFromAPI.shift();

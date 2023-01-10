@@ -2,18 +2,17 @@
   <div>
     <div class="team-name-header">
       <teamName> </teamName>
-
+      <teamName> </teamName>
       <teamName> </teamName>
       <teamName> </teamName>
       <teamName> </teamName>
     </div>
 
     <hr />
-    <div class="quiz-container">
+    <!-- <div class="quiz-container">
       <QuizQuestionAPI></QuizQuestionAPI>
-    </div>
-
-    <!-- <QuizQuestion/> -->
+    </div> -->
+    <quizQuestionVue></quizQuestionVue>
     <hr />
     <questionTimer></questionTimer>
     <div class="copy-right">&copy; Austin Metcalf</div>
@@ -23,16 +22,16 @@
 <script>
 import teamName from "./components/teamName.vue";
 import questionTimer from "./components/questionTimer.vue";
-import QuizQuestionAPI from "./components/quizQuestionAPI.vue";
-// import quizQuestionVue from './components/quizQuestion.vue';
+// import QuizQuestionAPI from "./components/quizQuestionAPI.vue";
+import quizQuestionVue from './components/quizQuestion.vue';
 
 export default {
   name: "App",
   components: {
     teamName,
     questionTimer,
-    QuizQuestionAPI,
-    // quizQuestionVue
+    // QuizQuestionAPI,
+    quizQuestionVue
   },
 };
 </script>
