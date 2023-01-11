@@ -1,8 +1,10 @@
 <template>
-  <div class="question-container">
-    <h1>Welcome to Trivia!</h1>
+  <div class="question-container-1">
+    <h3 class="videos">Videos</h3>
+    <a :href="link" class="videos">{{ linkText }}</a>
+    <h1>Welcome to Trivia! The future is now!</h1>
     <p>Question {{ currentCount }} of {{ questions.length }}</p>
-    <div class="question-container">
+    <div class="question-container-2">
       <p>{{ currentQuestion.prompt }}</p>
       <button @click="toggleAnswer" class="button">{{ buttonText }}</button>
       <p v-if="currentQuestion.showAnswer">{{ currentQuestion.answer }}</p>
@@ -18,6 +20,8 @@ export default {
       currentIndex: 0,
       currentCount: 1,
       buttonText: 'Show Answer',
+      link: 'https://www.youtube.com/watch?v=i2gNx4-REIA',
+      linkText: 'Chill',
       questions: [
         {
           prompt: 'St Andrew cross, St George cross and St Patrick cross make up this flag -',
@@ -30,18 +34,18 @@ export default {
           showAnswer: false
         },
         {
-          prompt: 'What is the spanish word for donkey?',
-          answer: 'Burro',
+          prompt: 'With over 500 million, who has the most followers on instagram in 2023?',
+          answer: 'Cristiano Ronaldo',
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'Is the following expression syntatically correct: 3 === 3',
+          answer: 'True',
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'Who holds the NBA scoring record?',
+          answer: 'Kareem Abdul-Jabbar',
           showAnswer: false
         },
         {
@@ -50,8 +54,8 @@ export default {
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'At the 2022 Berlin marathon, Kipchoge set a new world record.  At a pace of 13mph, what was his finish time?',
+          answer: '2:01:09',
           showAnswer: false
         },
         {
@@ -65,18 +69,18 @@ export default {
           showAnswer: false
         },
         {
-          prompt: 'I was released in 1985, but in 2022 I increased in streams >9,000%.  What song am I? ',
+          prompt: 'I was released in 1985, but in 2022 my Spotify streams increased 9,000%.  What song am I? ',
           answer: 'Running up that hill',
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'Name all countries that border France',
+          answer: 'Italy, Switzerland, Germany, Luxembourg, Belgium, Andorra and Monaco',
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'In the early hours of January 7th, 2022, the House elected a new Speaker.  Who is it?',
+          answer: 'Kevin McCarthy',
           showAnswer: false
         },
         {
@@ -85,18 +89,18 @@ export default {
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'Who is the author of the Star-Spangled Banner?',
+          answer: 'Francis Scott Key',
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'If data is a collection of facts and/ or statistics.  What is the word for a single fact or statistic?',
+          answer: 'datum',
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'Re-write the following Ebonics into English: No cap, this meal was straight bussin fr fr',
+          answer: 'I wont lie, this meal was very good',
           showAnswer: false
         },
         {
@@ -105,28 +109,68 @@ export default {
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'On January 1st, 2022, Brazil swore in a new President.  Who was it?',
+          answer: 'Luiz Inacio Lula da Silva',
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'What was the name of the high school in Grease?',
+          answer: 'Rydell High',
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'Complete the response in this viral video:',
+          answer: 'What the hell is even that?',
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'Which city sits lowest in latitude: San Diego, Tucson, or Austin?',
+          answer: 'Austin',
           showAnswer: false
         },
         {
-          prompt: 'What is the largest ocean in the world?',
-          answer: 'Pacific Ocean',
+          prompt: 'What does HTML stand for? ',
+          answer: 'HyperText Markup Language',
+          showAnswer: false
+        },
+        {
+          prompt: 'In which year was the first iPhone released?',
+          answer: '2007',
+          showAnswer: false
+        },
+        {
+          prompt: 'What is the longest running Broadway show?',
+          answer: 'Phantom of the Opera',
+          showAnswer: false
+        },
+        {
+          prompt: 'In Greek mythology, who was known to be the messenger of the gods?',
+          answer: 'Hermes',
+          showAnswer: false
+        },
+        {
+          prompt: 'In what city was the first Covid-19 infection discovered?',
+          answer: 'Wuhan, China',
+          showAnswer: false
+        },
+        {
+          prompt: 'The winter solstice occurs on which day of the year?',
+          answer: 'December 21st',
+          showAnswer: false
+        },
+        {
+          prompt: 'What is the rarest blood type?',
+          answer: 'AB negative',
+          showAnswer: false
+        },
+        {
+          prompt: 'What alcoholic beverage is made from juniper berries?',
+          answer: 'Gin',
+          showAnswer: false
+        },
+        {
+          prompt: 'Where on the food pyramid do eggplants belong?',
+          answer: 'fruits section',
           showAnswer: false
         },
       ]
@@ -151,11 +195,17 @@ export default {
 </script>
 
 <style scoped>
-.question-container{
+.question-container-1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 25px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.question-container-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .button {
   color: white;
@@ -165,5 +215,12 @@ export default {
   padding: 5px;
   max-width: 200px;
   margin: 1px;
+}
+.videos{
+  position: relative;
+  left: 400px;
+}
+h3{
+  text-decoration: underline;
 }
 </style>
