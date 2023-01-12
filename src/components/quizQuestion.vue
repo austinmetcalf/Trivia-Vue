@@ -6,10 +6,10 @@
     <p>Question {{ currentCount }} of {{ questions.length }}</p>
     <div class="question-container-2">
       <p>{{ currentQuestion.prompt }}</p>
-      <button @click="toggleAnswer" class="button">{{ buttonText }}</button>
+      <button @click="toggleAnswer" class="button cursor-pointer">{{ buttonText }}</button>
       <p v-if="currentQuestion.showAnswer">{{ currentQuestion.answer }}</p>
     </div>
-    <button v-if="currentIndex < questions.length - 1" @click="nextQuestion" class="button">Next Question</button>
+    <button v-if="currentIndex < questions.length - 1" @click="nextQuestion" class="button cursor-pointer">Next Question</button>
   </div>
 </template>
 
@@ -24,8 +24,8 @@ export default {
       linkText: 'Chill',
       questions: [
         {
-          prompt: 'St Andrew cross, St George cross and St Patrick cross make up this flag -',
-          answer: 'Union Jack or flag of United Kingdom',
+          prompt: 'According to an average of multiple cybersecurtiy firms, what percentage of internet traffice is non-human',
+          answer: '40%',
           showAnswer: false
         },
         {
@@ -75,7 +75,7 @@ export default {
         },
         {
           prompt: 'Name all countries that border France',
-          answer: 'Italy, Switzerland, Germany, Luxembourg, Belgium, Andorra and Monaco',
+          answer: 'Italy, Switzerland, Germany, Luxembourg, Belgium, Andorra, Spain and Monaco',
           showAnswer: false
         },
         {
@@ -206,6 +206,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: x-large;
 }
 .button {
   color: white;
@@ -222,5 +223,8 @@ export default {
 }
 h3{
   text-decoration: underline;
+}
+.cursor-pointer{
+  cursor: pointer;
 }
 </style>

@@ -2,8 +2,8 @@
   <div class="team-container">
     <input class="spacer" placeholder="Team Name" />
     <div class="team-score">{{ score }}</div>
-    <button class="button" @click="decrementScore">-</button>
-    <button class="button" @click="incrementScore">+</button>
+    <button class="button cursor-pointer" @click="decrementScore">-</button>
+    <button class="button cursor-pointer" @click="incrementScore">+</button>
   </div>
 </template>
 
@@ -48,5 +48,8 @@ export default {
   display: flex;
   margin: 2px;
   align-items: center;
+}
+.cursor-pointer{
+  cursor: pointer;
 }
 </style>

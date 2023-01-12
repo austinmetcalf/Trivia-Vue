@@ -2,10 +2,10 @@
   <div class="timer-display">
     <div>
       <div class="time-size">{{ countdown }}</div>
-      <button @click="toggleCountdown" class="button">
+      <button @click="toggleCountdown" class="button cursor-pointer">
         {{ countdownStarted ? "Stop" : "Start" }} Time
       </button>
-      <button @click="resetCountdown" class="button">Reset Countdown</button>
+      <button @click="resetCountdown" class="button cursor-pointer">Reset Countdown</button>
     </div>
   </div>
 </template>
@@ -79,5 +79,8 @@ export default {
   padding: 5px;
   max-width: 200px;
   margin: 1px;
+}
+.cursor-pointer{
+  cursor: pointer;
 }
 </style>

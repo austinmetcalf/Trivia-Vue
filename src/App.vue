@@ -25,6 +25,7 @@ import questionTimer from "./components/questionTimer.vue";
 // import QuizQuestionAPI from "./components/quizQuestionAPI.vue";
 import quizQuestionVue from './components/quizQuestion.vue';
 
+
 export default {
   name: "App",
   components: {
